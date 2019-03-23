@@ -1,0 +1,23 @@
+.container
+{
+  background-color: rgb(23, 23, 36);
+}
+.example-container {
+    padding: 2%;
+    width: 54%;
+    background-image: linear-gradient(white,#cddaf0);
+    display: flex;
+    flex-direction: column;
+  }
+  .myform {
+    width: 100px;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+  
+  .buttn {
+      background-color:white;
+
+  }

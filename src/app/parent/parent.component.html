@@ -1,0 +1,43 @@
+<div  class="container" align="center">
+  <div class="example-container" align="center">
+    <form [formGroup]="register" class="myform" #createForm="ngForm">
+     
+     
+      <mat-form-field>
+        <input matInput placeholder="First Name" formControlName="fName" [(ngModel)]='finame' />
+      </mat-form-field><br>
+      
+
+      <mat-form-field>
+        <input matInput placeholder="Last Name" formControlName="lName" [(ngModel)]='laname' />
+      </mat-form-field><br>
+
+      <mat-form-field>
+        <mat-select placeholder="Gender"  formControlName="gender">
+          <mat-option value="option">Male</mat-option>
+          <mat-option value="option">Female</mat-option>
+        </mat-select>
+      </mat-form-field><br>
+      
+
+      
+        <mat-form-field>
+          <input matInput placeholder="Enter your email" [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field><br>
+
+        <mat-form-field>
+          <input type="number" min="0" maxlength="10" matInput placeholder="Contact Number" formControlName="contact">
+        </mat-form-field><br>
+
+        <mat-form-field>
+          <textarea matInput placeholder="Address" formControlName="address"></textarea>
+        </mat-form-field><br>
+       
+        
+      <button mat-button class="buttn" [disabled]="!createForm.valid" (click)="toNext()" >Register</button>
+        
+    </form>        
+  
+  </div>
+</div>

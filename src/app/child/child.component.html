@@ -1,0 +1,20 @@
+
+<div  class="container" align="center">
+  <div class="example-container" align="center">
+    <form >
+     
+     <h1>Hi.....Welcome to our Homepage </h1>
+     <h4>Enter Your Age</h4>
+    
+      <mat-form-field>
+      <input matInput placeholder="Age"  type="number" (keyup)="onKey($event)">
+      </mat-form-field><br>
+
+    </form>
+    <!-- Message : {{message}} -->
+
+  </div>
+  <app-sub-child [age]= 'values' (messageEvent)="receiveMessage($event)"></app-sub-child>
+    <h2>{{message}}</h2>
+    
+  </div>
